@@ -4,14 +4,16 @@ using UnityEngine;
 using Vuforia;
 //David Soto y Kevin Macario
 
-public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler {
+public class JetBlueVirtualButton : MonoBehaviour, IVirtualButtonEventHandler
+{
+
     private VirtualButtonBehaviour virtualBtn;
     public Animator birdAnim;
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         //throw new System.NotImplementedException();
-        birdAnim.SetTrigger("peck");
-        birdAnim.SetTrigger("sing");
+        birdAnim.SetTrigger("flying");
+
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
@@ -20,15 +22,17 @@ public class VirtualButton : MonoBehaviour, IVirtualButtonEventHandler {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         virtualBtn = GetComponent<VirtualButtonBehaviour>();
         virtualBtn.RegisterEventHandler(this);
 
     }
 
     // Update is called once per frame
-    void Update () {
-		
-	}
+    void Update()
+    {
+
+    }
 
 }
